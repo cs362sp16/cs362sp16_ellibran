@@ -1,0 +1,10 @@
+I chose to refactor the following five switch statements:
+	smithy
+	village
+	great_hall [something broken]
+	salvager [something broken]
+	sea_hag
+	
+To refactor them all I did was take the code that each switch statement implimented and created a function that accomplished that.
+Then all I did was call those functions (as voids) and passed them the variables that they needed in order to work.
+I kept the return calls in their respective switch statements.
