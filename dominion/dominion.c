@@ -1293,7 +1293,7 @@ int updateCoins(int player, struct gameState *state, int bonus)
 //Refactoring
 /////////////
 
-void refac_sea_hag(struct gameState *state, currentPlayer)
+void refac_sea_hag(struct gameState *state, int currentPlayer)
 {
 	for (i = 0; i < state->numPlayers; i++)
 	{
@@ -1305,7 +1305,7 @@ void refac_sea_hag(struct gameState *state, currentPlayer)
     }
 }
 
-void refac_smithy(struct gameState *state, currentPlayer, int handPos)
+void refac_smithy(struct gameState *state, int currentPlayer, int handPos)
 {
 	//+3 Cards
     for (i = 0; i < 3; i++)
@@ -1317,7 +1317,7 @@ void refac_smithy(struct gameState *state, currentPlayer, int handPos)
     discardCard(handPos, currentPlayer, state, 0);
 }
 
-void refac_village(struct gameState *state, currentPlayer, int handPos)
+void refac_village(struct gameState *state, int currentPlayer, int handPos)
 {
 	//+1 Card
 	drawCard(currentPlayer, state);
@@ -1333,7 +1333,7 @@ void refac_village(struct gameState *state, currentPlayer, int handPos)
 //INCORRECT
 ///////////
 
-void refac_great_hall(struct gameState *state, currentPlayer, int handPos)
+void refac_great_hall(struct gameState *state, int currentPlayer, int handPos)
 {
 	//+1 Card
 	drawCard(currentPlayer, state);
@@ -1345,7 +1345,7 @@ void refac_great_hall(struct gameState *state, currentPlayer, int handPos)
 	//discardCard(handPos, currentPlayer, state, 0);
 }
 
-void refac_salvager(struct gameState *state, currentPlayer, int handPos, int choice1)
+void refac_salvager(struct gameState *state, int currentPlayer, int handPos, int choice1)
 {
 	//+1 buy
 	//state->numBuys++;
