@@ -1295,7 +1295,8 @@ int updateCoins(int player, struct gameState *state, int bonus)
 
 void refac_sea_hag(struct gameState *state, int currentPlayer)
 {
-	for (int i = 0; i < state->numPlayers; i++)
+	int i;
+	for (i = 0; i < state->numPlayers; i++)
 	{
 		if (i != currentPlayer){
 		  state->discard[i][state->discardCount[i]] = state->deck[i][state->deckCount[i]--];			    state->deckCount[i]--;
@@ -1307,8 +1308,9 @@ void refac_sea_hag(struct gameState *state, int currentPlayer)
 
 void refac_smithy(struct gameState *state, int currentPlayer, int handPos)
 {
+	int i;
 	//+3 Cards
-    for (int i = 0; i < 3; i++)
+    for (i = 0; i < 3; i++)
 	{
 	  drawCard(currentPlayer, state);
 	}
