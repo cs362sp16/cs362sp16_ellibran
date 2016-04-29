@@ -20,7 +20,7 @@ void checkasserts() {
   }
 }
 
-void main()
+int main()
 {
 	int cardNumber;
 	int r;

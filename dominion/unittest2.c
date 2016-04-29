@@ -20,7 +20,7 @@ void checkasserts() {
   }
 }
 
-void main()
+int main()
 {
 	struct gameState g;
 	struct gameState *p = &g;
