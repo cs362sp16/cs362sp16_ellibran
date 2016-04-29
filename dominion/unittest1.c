@@ -137,4 +137,6 @@ int main()
 	myassert(r == -1, "I_want_to_be_a_card_too, should return invalid -1");
 	
 	checkasserts();
+	
+	return 0;
 }
