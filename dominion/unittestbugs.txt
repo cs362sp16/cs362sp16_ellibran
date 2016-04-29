@@ -1,0 +1,1 @@
+The majority of the bugs that I encountered were syntactical, missing a declaration here, passing something named wrong there. However the two biggest things that held me back were some initial trouble setting up the makefile, which I still am not completely sure it cooperating with me, and my understanding of dominion and how to properly test different elements of it.
