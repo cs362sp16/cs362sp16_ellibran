@@ -23,6 +23,7 @@ int main()
 {
 	struct gameState g;
 	struct gameState *p = &g;
+	int r;
 
 	int k[10] = {smithy,adventurer,gardens,embargo,cutpurse,mine,ambassador,outpost,baron,tribute};
 
