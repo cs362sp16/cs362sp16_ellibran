@@ -15,7 +15,7 @@ interface.o: interface.h interface.c
 player: player.c interface.o
 	gcc -o player player.c -g  dominion.o rngs.o interface.o $(CFLAGS)
 	
-unittestresults.out: unittest1 unittest2 unittest3
+unittestresults.out: rngs.o dominion.o interface.o unittest1 unittest2 unittest3
 	
 
 unittest1:
