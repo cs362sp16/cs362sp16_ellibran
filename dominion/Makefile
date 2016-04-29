@@ -23,6 +23,7 @@ unittestresults.out: dominion.o rngs.o
 	./unittest1 >> unittestresults.out
 	./unittest2 >> unittestresults.out
 	./unittest3 >> unittestresults.out
+	gcov dominion.c >> unittestresults.out
 	
 all: playdom player
 

@@ -1293,7 +1293,7 @@ int updateCoins(int player, struct gameState *state, int bonus)
 //Refactoring
 /////////////
 
-void refac_sea_hag(struct gameState *state, int currentPlayer)
+int refac_sea_hag(struct gameState *state, int currentPlayer)
 {
 	int i;
 	for (i = 0; i < state->numPlayers; i++)
@@ -1304,9 +1304,10 @@ void refac_sea_hag(struct gameState *state, int currentPlayer)
 		  state->deck[i][state->deckCount[i]--] = curse;//Top card now a curse
 		}
     }
+	return 0;
 }
 
-void refac_smithy(struct gameState *state, int currentPlayer, int handPos)
+int refac_smithy(struct gameState *state, int currentPlayer, int handPos)
 {
 	int i;
 	//+3 Cards
@@ -1317,9 +1318,10 @@ void refac_smithy(struct gameState *state, int currentPlayer, int handPos)
 			
     //discard card from hand
     discardCard(handPos, currentPlayer, state, 0);
+	return 0;
 }
 
-void refac_village(struct gameState *state, int currentPlayer, int handPos)
+int refac_village(struct gameState *state, int currentPlayer, int handPos)
 {
 	//+1 Card
 	drawCard(currentPlayer, state);
@@ -1329,13 +1331,14 @@ void refac_village(struct gameState *state, int currentPlayer, int handPos)
 		
 	//discard played card from hand
 	discardCard(handPos, currentPlayer, state, 0);
+	return 0;
 }
 
 ///////////
 //INCORRECT
 ///////////
 
-void refac_great_hall(struct gameState *state, int currentPlayer, int handPos)
+int refac_great_hall(struct gameState *state, int currentPlayer, int handPos)
 {
 	//+1 Card
 	drawCard(currentPlayer, state);
@@ -1345,9 +1348,10 @@ void refac_great_hall(struct gameState *state, int currentPlayer, int handPos)
 		
 	//discard card from hand
 	//discardCard(handPos, currentPlayer, state, 0);
+	return 0;
 }
 
-void refac_salvager(struct gameState *state, int currentPlayer, int handPos, int choice1)
+int refac_salvager(struct gameState *state, int currentPlayer, int handPos, int choice1)
 {
 	//+1 buy
 	//state->numBuys++;
@@ -1362,6 +1366,7 @@ void refac_salvager(struct gameState *state, int currentPlayer, int handPos, int
 		
 	//discard card
 	discardCard(handPos, currentPlayer, state, 0);
+	return 0;
 }
 
 
