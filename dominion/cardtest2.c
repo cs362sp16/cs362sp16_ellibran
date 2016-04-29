@@ -1,5 +1,5 @@
 ////////////////////////
-//mine Unit Test
+//village Unit Test
 ////////////////////////
 
 #include "dominion.h"
@@ -9,14 +9,14 @@ int failed = 0;
 
 int myassert(int b,char* msg) {
   if (b == 0) {
-    printf("mine Test Failure: %s\n",msg);
+    printf("village Test Failure: %s\n",msg);
     failed = 1;
   }
 }
 
 void checkasserts() {
   if (!failed) {
-    printf ("mine Successful\n");
+    printf ("village Successful\n");
   }
 }
 
@@ -29,8 +29,8 @@ int main()
 
 	initializeGame(2, k, 5, &g);
 	
-	r = cardEffect(5, 1, 1, 1, &g, 3, 0);
-	myassert(r == 0, "mine, should return valid 0");
+	r = cardEffect(village, 1, 1, 1, &g, 1, 0);
+	myassert(r == 0, "village, should return valid 0");
 
 	checkasserts();
 }

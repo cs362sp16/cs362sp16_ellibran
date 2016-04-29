@@ -29,7 +29,7 @@ int main()
 
 	initializeGame(2, k, 5, &g);
 	
-	r = cardEffect(0, 1, 1, 1, &g, 3, 0);
+	r = cardEffect(adventurer, 1, 1, 1, &g, 1, 0);
 	myassert(r == 0, "adventurer, should return valid 0");
 
 	checkasserts();
