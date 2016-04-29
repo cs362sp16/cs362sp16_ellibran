@@ -23,6 +23,7 @@ int main()
 {
 	int cardNumber;
 	int r;
+	int I_want_to_be_a_card_too = 52;
 
 	cardNumber = curse;
 	r = getCost(cardNumber);
