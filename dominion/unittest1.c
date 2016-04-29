@@ -1,5 +1,5 @@
 ////////////////////
-//Get Cost Unit Test
+//getCost Unit Test
 ////////////////////
 
 #include "dominion.h"

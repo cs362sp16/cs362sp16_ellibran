@@ -9,7 +9,7 @@ int failed = 0;
 
 int myassert(int b,char* msg) {
   if (b == 0) {
-    printf("drawCard Test Failure: %s\n",msg);
+    printf("drawCard Test Success: %s\n",msg);
     failed = 1;
   }
 }
@@ -30,7 +30,7 @@ int main()
 	initializeGame(2, k, 5, &g);
 	
 	r = drawCard(1, &g);
-	myassert(r == -1, "drawCard, should return invalid -1");
+	myassert(r == 0, "drawCard, should return valid 0");
 	
 	checkasserts();	
 }
