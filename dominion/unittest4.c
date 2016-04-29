@@ -30,13 +30,13 @@ int main()
 	initializeGame(2, k, 5, &g);
 	
 	r1 = buyCard (1, &g);
-	myassert(r == 0, "buyCard, should return valid 0");
+	myassert(r1 == 0, "buyCard, should return valid 0");
 	
 	r2 = buyCard(42, &g);
-	myassert(r == -1, "buyCard, should return invalid -1, card doesn't exist");
+	myassert(r2 == -1, "buyCard, should return invalid -1, card doesn't exist");
 	
 	r3 = buyCard(1, &g);
-	myassert(r == -1, "buyCard, should return invalid -1, player out of money");
+	myassert(r3 == -1, "buyCard, should return invalid -1, player out of money");
 
 	
 	checkasserts();
