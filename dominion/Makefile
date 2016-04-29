@@ -20,9 +20,9 @@ unittestresults.out: dominion.o rngs.o
 	gcc -o unittest2 unittest2.c dominion.c rngs.o $(CFLAGS)
 	gcc -o unittest3 unittest3.c dominion.c rngs.o $(CFLAGS)
 	rm -f unittestresults.out
-	./unittest1 >> unittestresults.out
-	./unittest2 >> unittestresults.out
-	./unittest3 >> unittestresults.out
+	-./unittest1 >> unittestresults.out
+	-./unittest2 >> unittestresults.out
+	-./unittest3 >> unittestresults.out
 	gcov dominion.c >> unittestresults.out
 	
 all: playdom player
