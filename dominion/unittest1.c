@@ -3,6 +3,7 @@
 ////////////////////
 
 #include "dominion.h"
+#include <stdio.h>
 
 int failed = 0;
 
@@ -19,7 +20,7 @@ void checkasserts() {
   }
 }
 
-int main()
+void main()
 {
 	int cardNumber;
 	int r;
@@ -138,6 +139,4 @@ int main()
 	myassert(r == -1, "I_want_to_be_a_card_too, should return invalid -1");
 	
 	checkasserts();
-	
-	return 0;
 }

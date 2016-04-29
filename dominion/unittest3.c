@@ -3,6 +3,7 @@
 ////////////////////////
 
 #include "dominion.h"
+#include <stdio.h>
 
 int failed = 0;
 
@@ -19,7 +20,7 @@ void checkasserts() {
   }
 }
 
-int main()
+void main()
 {
 	struct gameState g;
 	int r;
@@ -31,7 +32,5 @@ int main()
 	r = drawCard(1, &g);
 	myassert(r == -1, "drawCard, should return invalid -1");
 	
-	checkasserts();
-	
-	return 0;
+	checkasserts();	
 }
