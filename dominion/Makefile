@@ -35,15 +35,15 @@ unittestresults.out: dominion.o rngs.o
 	-./cardtest4 >> unittestresults.out
 	gcov dominion.c >> unittestresults.out
 	
-randomtestresults.out: dominion.o rngs.o
+randomtestresults.out: dominion.o rngs.o interface.o
 	gcc -o randomtestcard1 randomtestcard1.c dominion.c rngs.o $(CFLAGS)
 	rm -f randomtestcard1.out
 	-./randomtestcard1 >> randomtestcard1.out
 	
-debug: dominion.o rngs.o
+debug: dominion.o rngs.o interface.o
 	gcc -o randDEBUG -g randomtestcard1.c dominion.c rngs.o $(CFLAGS)
 	
-man: dominion.o rngs.o
+man: dominion.o rngs.o interface.o
 	gcc -o randomtestcard1 randomtestcard1.c dominion.c rngs.o $(CFLAGS)
 	
 all: playdom player

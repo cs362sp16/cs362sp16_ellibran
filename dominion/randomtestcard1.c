@@ -1,4 +1,5 @@
 #include "dominion.h"
+#include "interface.h"
 #include "rngs.h"
 #include <stdio.h>
 #include <time.h>
@@ -40,8 +41,10 @@ int main(int argc, char *argv[]){
 		g.deckCount[player] = deck_count;
 		g.handCount[player] = hand_count;
 		
-		cardEffect(smithy, 1, 1, 1, &g);
+		addCardToHand(player, smithy, &g);
+		playCard(hand_count, 0, 0, 0, &g);
+		//cardEffect(smithy, 1, 1, 1, &g);
 		
-		printf("Smithy Test #%d: Players [%d] Player [%d] Deck Count [%d] Hand Count [%d]\n", player_count, player, deck_count, hand_count);		
+		printf("Smithy Test #%d: Players [%d] Player [%d] Deck Count [%d] Hand Count [%d + 1]\n", player_count, player, deck_count, hand_count);		
 	}
 }
