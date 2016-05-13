@@ -35,6 +35,11 @@ unittestresults.out: dominion.o rngs.o
 	-./cardtest4 >> unittestresults.out
 	gcov dominion.c >> unittestresults.out
 	
+randomtestresults.out: dominion.o rngs.o
+	gcc -o randomtestcard1 randomtestcard1.c dominion.c rngs.o $(CFLAGS)
+	rm -f randomtestcard1.out
+	./randomtestcard1 42 10 >> randomtestcard1.out
+	
 all: playdom player
 
 clean:
