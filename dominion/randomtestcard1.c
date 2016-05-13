@@ -18,7 +18,7 @@ int main(int argc, char *argv[]){
 		exit(0);
 	}
 	
-	for(n = 0; n < MAX; n++){		
+	for(i = 0; i < test_max; n++){		
 		player_count = rand() %3 + 2;
 		
 		initializeGame(player_count, k, seed, &g);
