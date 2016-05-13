@@ -45,6 +45,6 @@ int main(int argc, char *argv[]){
 		playCard(hand_count, 0, 0, 0, &g);
 		//cardEffect(smithy, 1, 1, 1, &g);
 		
-		printf("Smithy Test #%d: Players [%d] Player [%d] Deck Count [%d] Hand Count [%d + 1]\n", player_count, player, deck_count, hand_count);		
+		printf("Smithy Test #%d: Players [%d] Player [%d] Deck Count [%d] Hand Count [%d + 1]\n", i, player_count, player, deck_count, hand_count);		
 	}
 }
