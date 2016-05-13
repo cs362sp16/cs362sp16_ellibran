@@ -15,7 +15,7 @@ int main(int argc, char *argv[]){
 		test_max = atoi(argv[2]);
 	}else {
 		printf("USAGE: [Program Name] [Seed] [Number of Tests]\n");
-		exit(0);
+		return 0;
 	}
 	
 	for(i = 0; i < test_max; i++){		
