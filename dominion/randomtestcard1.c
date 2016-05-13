@@ -17,8 +17,8 @@ int main(int argc, char *argv[]){
 	printf("TEST 2\n");
 	
 	if(argc = 3){
-		seed = 42;
-		test_max = 10;
+		seed = atoi(argv[1]);
+		test_max = atoi(argv[2]);
 	}else {
 		printf("USAGE: [Program Name] [Seed] [Number of Tests]\n");
 		return 0;
