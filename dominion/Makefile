@@ -38,7 +38,7 @@ unittestresults.out: dominion.o rngs.o
 randomtestresults.out: dominion.o rngs.o
 	gcc -o randomtestcard1 randomtestcard1.c dominion.c rngs.o $(CFLAGS)
 	rm -f randomtestcard1.out
-	-./randomtestcard1 42 10 >> randomtestcard1.out
+	-./randomtestcard1 >> randomtestcard1.out
 	
 debug: dominion.o rngs.o
 	gcc -o randDEBUG -g randomtestcard1.c dominion.c rngs.o $(CFLAGS)
