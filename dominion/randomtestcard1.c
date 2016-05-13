@@ -4,30 +4,24 @@
 #include <stdio.h>
 #include <time.h>
 
-int main(int argc, char *argv[]){
-	
-	printf("TEST 1\n");
-	
-	int seed, test_max, player_count, player, deck_count, hand_count, turn, i;
+int main(int argc, char *argv[]){	
+	int seed, test_max, player_count, player, deck_count, hand_count, output, turn, i;
 	
 	struct gameState g;
 	
 	int k[10] = {smithy,adventurer,gardens,embargo,cutpurse,mine,ambassador,outpost,baron,tribute};
 	
-	printf("TEST 2\n");
-	
 	if(argc = 3){
 		seed = atoi(argv[1]);
 		test_max = atoi(argv[2]);
+		output = atoi(argv[3]);
+		
 	}else {
-		printf("USAGE: [Program Name] [Seed] [Number of Tests]\n");
+		printf("USAGE: [Program Name] [Seed] [Number of Tests] [Output 0/1]\n");
 		return 0;
 	}
-	
-	printf("TEST 3\n");
-	
+		
 	for(i = 0; i < test_max; i++){		
-		printf("TEST 4\n");
 		player_count = rand() %3 + 2;
 		
 		initializeGame(player_count, k, seed, &g);
@@ -45,6 +39,9 @@ int main(int argc, char *argv[]){
 		playCard(hand_count, 0, 0, 0, &g);
 		//cardEffect(smithy, 1, 1, 1, &g);
 		
-		printf("Smithy Test #%d: Players [%d] Player [%d] Deck Count [%d] Hand Count [%d + 1]\n", i, player_count, player, deck_count, hand_count);		
+		//decides if outputs are sent to screen
+		if(output==1){
+			printf("Smithy Test #%d: Players [%d] Player [%d] Deck Count [%d] Hand Count [%d + 1]\n", i, player_count, player, deck_count, hand_count);	
+		}
 	}
 }
