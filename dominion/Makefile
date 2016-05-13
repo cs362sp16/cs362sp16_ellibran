@@ -40,6 +40,12 @@ randomtestresults.out: dominion.o rngs.o
 	rm -f randomtestcard1.out
 	-./randomtestcard1 42 10 >> randomtestcard1.out
 	
+debug: dominion.o rngs.o
+	gcc -o randDEBUG -g randomtestcard1.c dominion.c rngs.o $(CFLAGS)
+	
+man: dominion.o rngs.o
+	gcc -o randomtestcard1 randomtestcard1.c dominion.c rngs.o $(CFLAGS)
+	
 all: playdom player
 
 clean:

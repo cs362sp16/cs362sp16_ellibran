@@ -4,11 +4,16 @@
 #include <time.h>
 
 int main(int argc, char *argv[]){
+	
+	printf("TEST 1\n");
+	
 	int seed, test_max, player_count, player, deck_count, hand_count, turn, i;
 	
 	struct gameState g;
 	
 	int k[10] = {smithy,adventurer,gardens,embargo,cutpurse,mine,ambassador,outpost,baron,tribute};
+	
+	printf("TEST 2\n");
 	
 	if(argc = 3){
 		seed = atoi(argv[1]);
@@ -18,7 +23,10 @@ int main(int argc, char *argv[]){
 		return 0;
 	}
 	
+	printf("TEST 3\n");
+	
 	for(i = 0; i < test_max; i++){		
+		printf("TEST 4\n");
 		player_count = rand() %3 + 2;
 		
 		initializeGame(player_count, k, seed, &g);
