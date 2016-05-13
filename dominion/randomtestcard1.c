@@ -18,7 +18,7 @@ int main(int argc, char *argv[]){
 		exit(0);
 	}
 	
-	for(i = 0; i < test_max; n++){		
+	for(i = 0; i < test_max; i++){		
 		player_count = rand() %3 + 2;
 		
 		initializeGame(player_count, k, seed, &g);
@@ -30,7 +30,7 @@ int main(int argc, char *argv[]){
 		
 		g.whoseTurn = player;
 		g.deckCount[player] = deck_count;
-		g.handCound[player] = hand_count;
+		g.handCount[player] = hand_count;
 		
 		cardEffect(smithy, 1, 1, 1, &g);
 		
