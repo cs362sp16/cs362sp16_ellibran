@@ -37,8 +37,7 @@ unittestresults.out: dominion.o rngs.o
 	
 randomtestresults.out: dominion.o rngs.o interface.o
 	gcc -o randomtestcard1 randomtestcard1.c dominion.o rngs.o interface.o $(CFLAGS)
-	rm -f randomtestcard1.out
-	-./randomtestcard1 >> randomtestcard1.out
+	sh randScript.sh
 	
 debug: dominion.o rngs.o interface.o
 	gcc -o randDEBUG -g randomtestcard1.c dominion.o rngs.o interface.o $(CFLAGS)
