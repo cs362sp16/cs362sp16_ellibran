@@ -1,4 +1,6 @@
-# Script
+# To turn on output change the 0 to a 1
+# Ex: randomtestcard1 42 1000 0
+#     randomtestcard1 42 1000 1
 
 clear
 
