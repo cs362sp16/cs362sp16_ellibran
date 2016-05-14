@@ -10,7 +10,7 @@ gcov dominion.c >> randomtestcard1.out
 
 echo "------------------------"
 
-echo "Running: randomtestcard1"
+echo "Running: randomtestcard2"
 echo "Seed: 42"
 echo "Times: 1000"
 echo "Output: Disabled"
@@ -20,7 +20,7 @@ gcov dominion.c >> randomtestcard2.out
 
 echo "------------------------"
 
-echo "Running: randomtestcard1"
+echo "Running: randomtestadventurer"
 echo "Seed: 42"
 echo "Times: 1000"
 echo "Output: Disabled"
