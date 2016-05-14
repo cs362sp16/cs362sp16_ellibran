@@ -1,6 +1,6 @@
-//////////////////
-//testing smithy
-//////////////////
+////////////////////
+//testing adventurer
+////////////////////
 
 #include "dominion.h"
 #include "interface.h"
@@ -39,9 +39,8 @@ int main(int argc, char *argv[]){
 		g.deckCount[player] = deck_count;
 		g.handCount[player] = hand_count;
 		
-		addCardToHand(player, smithy, &g);
+		addCardToHand(player, adventurer, &g);
 		playCard(hand_count, 0, 0, 0, &g);
-		//cardEffect(smithy, 1, 1, 1, &g);
 		
 		//decides if outputs are sent to screen
 		if(output==1){
