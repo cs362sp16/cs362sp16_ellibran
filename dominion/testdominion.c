@@ -195,17 +195,21 @@ void game_play(long seed)
 	
 	players = g.numPlayers;
 	
-	
 	printf("GAME: Starting\n");
 	printf("GAME: Players [%d]\n", players);
 	
+	printf("\n########################\n\n");
+	
 	while(!isGameOver(&g)){
+		printf("\n          ----          \n\n");
 		printf("PLAYER: Turn [%d]", g.whoseTurn);
 		player_action(&g);
 		player_buy(&g);
 		printf("PLAYER: End Turn\n");
 		endTurn(&g);
 	}
+	
+	printf("\n########################\n\n");
 	
 	printf("GAME: Over\n");
 	
@@ -215,7 +219,7 @@ void game_play(long seed)
 	
 	getWinners(w, &g);
 	for(i = 0; i< players; i++){
-		if(w[1]){
+		if(w[i]){
 			printf("STAT: Player [%d] Wins\n", i);
 		}
 	}
