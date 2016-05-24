@@ -156,7 +156,7 @@ int card_buy(struct gameState *g)
 	
 	c = (enum CARD)(int)floor(Random() * NUM_TOTAL_K_CARDS);
 	
-	while(getCost(c) > g->coins || c != curse || g->supplyCount[c] == 0){
+	while(getCost(c) > g->coins || c == curse || g->supplyCount[c] == 0){
 		c = (enum CARD)(int)floor(Random() * NUM_TOTAL_K_CARDS);
 	}
 	
