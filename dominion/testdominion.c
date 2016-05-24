@@ -133,7 +133,7 @@ int card_play(struct gameState *g)
 	index = card_action_index(g);
 	c = g->hand[g->whoseTurn][index];
 
-	r = playCard(index);
+	r = playCard(index, 0, 0, 0, &g);
 	
 	printf("CARD: Playing [%d]\n", c);
 	
