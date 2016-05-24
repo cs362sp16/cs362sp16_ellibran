@@ -85,7 +85,9 @@ struct gameState init_Game(long seed)
 	PutSeed(seed);
 	
 	card_random(cards);
-	num_players = rand() % 4 + 2;
+	num_players = rand() %4 + 2;
+	printf("DEBUG: NUM PLAYERS %d\n", num_players);
+	
 	initializeGame(num_players, (int *)cards, (int)seed, &g);
 	
 	return g;
