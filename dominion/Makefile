@@ -47,6 +47,10 @@ debug: dominion.o rngs.o interface.o
 man: dominion.o rngs.o interface.o
 	gcc -o randomtestcard1 randomtestcard1.c dominion.o rngs.o interface.o $(CFLAGS)
 	
+testdominion: testdominion.c dominion.o rngs.o interface.o
+	gcc -o testdominion testdominion.c dominion.o rngs.o interface.o $(CFLAGS)
+	
+	
 all: playdom player
 
 clean:
