@@ -42,10 +42,10 @@ int main(int argc, char **argv)
 		printf("USAGE: [Program Name] [Seed]\n");
 		return 0;
 	} else{
-		seed = atoi[1];
+		seed = atoi(argv[1]);
 	}
 
-	game_play();
+	game_play(seed);
 	
 	return 0;	
 }
@@ -85,7 +85,7 @@ struct gameState init_Game(long seed)
 	PutSeed(seed);
 	
 	card_random(cards);
-	num_players = rand() 4 + 2;
+	num_players = rand() % 4 + 2;
 	initializeGame(num_players, (int *)cards, (int)seed, &g);
 	
 	return g;
@@ -127,13 +127,13 @@ int card_action_index(struct gameState *g)
 
 int card_play(struct gameState *g)
 {
-	int index_action, r;
-	enum Card c;
+	int index, r;
+	enum CARD c;
 	
 	index = card_action_index(g);
-	c = g->hand[g->whoseTurn][index_action];
+	c = g->hand[g->whoseTurn][index];
 
-	r = playCard(index_action, -1, -1, -1, g);
+	r = playCard(index);
 	
 	printf("CARD: Playing [%d]\n", c);
 	
@@ -151,7 +151,7 @@ int card_buy(struct gameState *g)
 	
 	c = (enum CARD)(int)floor(Random() * NUM_TOTAL_K_CARDS);
 	
-	while(getCost(c) > g->coins || card != curse || g->supplyCount[c] == 0){
+	while(getCost(c) > g->coins || c != curse || g->supplyCount[c] == 0){
 		c = (enum CARD)(int)floor(Random() * NUM_TOTAL_K_CARDS);
 	}
 	
@@ -186,7 +186,7 @@ void game_play(long seed)
 	int w[4];
 	struct gameState g;
 	
-	g = init_Game(g);
+	g = init_Game(seed);
 	
 	players = g.numPlayers;
 	
