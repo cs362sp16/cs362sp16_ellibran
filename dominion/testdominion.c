@@ -6,6 +6,7 @@
  
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 #include <time.h>
 
 #include "dominion.h"
@@ -14,6 +15,7 @@
 #include "dominion_helpers.h"
 
 #define NUM_TOTAL_K_CARDS (treasure_map + 1)
+#define STRING_LEN 32
 
 //game function
 struct gameState init_Game(long seed);
@@ -148,6 +150,8 @@ int card_play(struct gameState *g)
 int card_buy(struct gameState *g)
 {
 	enum CARD c;
+	int tmp_num;
+	char cardName[STRING_LEN];
 	
 	if(g->coins == 0 || g->numBuys == 0){
 		printf("CARD: Invalid Buy\n");
@@ -160,7 +164,11 @@ int card_buy(struct gameState *g)
 		c = (enum CARD)(int)floor(Random() * NUM_TOTAL_K_CARDS);
 	}
 	
-	printf("CARD: Valid Buy [%d]\n", c);
+	tmp_num = c;
+	
+	cardNumToName(tmp_num, cardName);
+	
+	printf("CARD: Valid Buy [%s]\n", cardName);
 	buyCard(c, g);
 	
 	return 0;
@@ -202,7 +210,7 @@ void game_play(long seed)
 	
 	while(!isGameOver(&g)){
 		printf("\n          ----          \n\n");
-		printf("PLAYER: Turn [%d]", g.whoseTurn);
+		printf("PLAYER: Turn [%d]\n", g.whoseTurn);
 		player_action(&g);
 		player_buy(&g);
 		printf("PLAYER: End Turn\n");
