@@ -18,6 +18,8 @@ cd ../../cs362sp16_longmane/dominion/
 make all
 make testdom
 
+clear
+
 #returning to begining directory
 cd ../../cs362sp16_ellibran/dominion/
 
@@ -26,7 +28,7 @@ testdominion $seed > testdominion1.txt
 
 diff --suppress-common-lines testdominion1.txt testdominion2.txt > differential.txt
 
-if [[-s diffresult]]; then
+if [[ -s diffresult ]]; then
 	echo "TEST FAILED"
 	cat differential.txt
 else
