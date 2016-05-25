@@ -12,7 +12,7 @@ make all
 make testdominion
 
 #changing directory to the second one
-cd ../../cs362sp16_longmane/dominion/
+cd ../../dominion/
 
 #making
 make all
@@ -24,7 +24,7 @@ clear
 cd ../../cs362sp16_ellibran/dominion/
 
 testdominion $seed > testdominion1.txt
-../../cs362sp16_longmane/dominion/testdom $seed > ../../cs362sp16_ellibran/dominion/testdominion2.txt
+../../dominion/testdom $seed > ../../cs362sp16_ellibran/dominion/testdominion2.txt
 
 diff --suppress-common-lines testdominion1.txt testdominion2.txt > differential.txt
 

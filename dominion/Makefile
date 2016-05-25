@@ -50,6 +50,9 @@ man: dominion.o rngs.o interface.o
 testdominion: testdominion.c dominion.o rngs.o interface.o
 	gcc -o testdominion testdominion.c dominion.o rngs.o interface.o $(CFLAGS)
 	
+testdominioncov: testdominion
+	sh testdominioncov.sh
+	
 all: playdom player
 
 clean:
