@@ -26,11 +26,11 @@ cd ../../cs362sp16_ellibran/dominion/
 testdominion $seed > testdominion1.txt
 ../../dominion/testdom $seed > ../../cs362sp16_ellibran/dominion/testdominion2.txt
 
-diff --suppress-common-lines testdominion1.txt testdominion2.txt > differential.txt
+diff --suppress-common-lines testdominion1.txt testdominion2.txt > diff.txt
 
 if [[ -s diffresult ]]; then
 	echo "TEST FAILED"
-	cat differential.txt
+	cat diff.txt
 else
 	echo "TEST SUCCESS"
 fi ; 
