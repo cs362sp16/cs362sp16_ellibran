@@ -89,12 +89,9 @@ struct gameState init_Game(long seed)
 	card_random(cards);
 	num_players = rand() %3 + 1;
 	num_players++;
-	printf("DEBUG: NUM PLAYERS %d\n", num_players);
 	
 	initializeGame(num_players, (int *)cards, (int)seed, &g);
-	
-	printf("DEBUG: NUM PLAYERS GAMESTATE %d\n", g.numPlayers);
-	
+		
 	return g;
 }
 
@@ -134,7 +131,8 @@ int card_action_index(struct gameState *g)
 
 int card_play(struct gameState *g)
 {
-	int index, r;
+	int index, r, tmp_num;
+	char cardName[STRING_LEN];
 	enum CARD c;
 	
 	index = card_action_index(g);
@@ -142,7 +140,11 @@ int card_play(struct gameState *g)
 
 	r = playCard(index, 0, 0, 0, &g);
 	
-	printf("CARD: Playing [%d]\n", c);
+	tmp_num = c;
+	
+	cardNumToName(tmp_num, cardName);
+	
+	printf("CARD: Playing [%s]\n", cardName);
 	
 	return r;	
 }
