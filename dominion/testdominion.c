@@ -37,16 +37,18 @@ int player_buy(struct gameState *g);
 int main(int argc, char **argv)
 {
 	long seed;
-	
-	srand(time(NULL));
+	int t;
 	
 	if(argc != 2){
 		printf("USAGE: [Program Name] [Seed]\n");
 		return 0;
 	} else{
 		seed = atoi(argv[1]);
+		t = atoi(argv[1]);
 	}
 
+	srand((unsigned)t);
+	
 	game_play(seed);
 	
 	return 0;	
