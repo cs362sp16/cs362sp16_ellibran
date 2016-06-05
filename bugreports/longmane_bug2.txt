@@ -1,0 +1,14 @@
+Name: Failure to Discard
+File: dominion.c
+Function: new_mine {Lines 1171 - 1207}
+Severity: Moderate, is a card that will not be discarded after use.
+Priority: Moderate, it is not game breaking but is a substantial error if the player gets this card.
+
+Description: 
+There is a bug in dominion.c, specifically in the function new_mine. My unit test returned that the function never discards the trashed card.
+
+Reproduction: 
+Create a simulated game and have a player be given and use the card mine.
+
+Fix: 
+	discardCard(i, currentPlayer, state, 0);

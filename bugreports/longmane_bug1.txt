@@ -1,0 +1,14 @@
+Name: Free Action
+File: Dominion.c
+Function: new_great_hall {Lines 1237 - 1248}
+Severity: Moderate, the use of the card does not register as an action.
+Priority: Moderate, it is not game breaking but is a substantial error if the player gets this card.
+
+Description: 
+There is a bug in Dominion.c, specifically in the function new_great_hall. A unit test that looks at the function noted that the use of using the great hall card should count as an action, but numActions is never incrimented in this function.
+
+Reproduction: 
+Create a game simulated game and have a player be given and use the card greate hall.
+
+Fix: 
+	state->numActions++;

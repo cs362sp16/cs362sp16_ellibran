@@ -1,0 +1,14 @@
+Name: Increment Off By Four Error
+File: dominion.c
+Function: card_village
+Severity: Moderate, the use of this card will give the player two additional actions and not count the cards use as one.
+Priority: Moderate, it is not game breaking but is a substantial error if the player gets and uses this card.
+
+Description: 
+There is a bug in dominion.c, specifically in the function card_village. My unit test returned that the function, instead of incrementing the number of actions by two, decrements it. 
+
+Reproduction: 
+Create a simulated game and have a player be given and use the village card.
+
+Fix: 
+	state->numActions = state->numActions + 2;
