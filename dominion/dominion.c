@@ -1347,7 +1347,7 @@ int refac_great_hall(struct gameState *state, int currentPlayer, int handPos)
 	state->numActions++;
 		
 	//discard card from hand
-	//discardCard(handPos, currentPlayer, state, 0);
+	discardCard(handPos, currentPlayer, state, 0);
 	return 0;
 }
 
