@@ -40,7 +40,7 @@ int main(int argc, char **argv)
 	int t;
 	
 	if(argc != 2){
-		printf("USAGE: [Program Name] [Seed]\n");
+		//print_f("USAGE: [Program Name] [Seed]\n");
 		return 0;
 	} else{
 		seed = atoi(argv[1]);
@@ -146,7 +146,7 @@ int card_play(struct gameState *g)
 	
 	cardNumToName(tmp_num, cardName);
 	
-	printf("CARD: Playing [%s]\n", cardName);
+	//printf("CARD: Playing [%s]\n", cardName);
 	
 	return r;	
 }
@@ -158,7 +158,7 @@ int card_buy(struct gameState *g)
 	char cardName[STRING_LEN];
 	
 	if(g->coins == 0 || g->numBuys == 0){
-		printf("CARD: Invalid Buy\n");
+		//print_f("CARD: Invalid Buy\n");
 		return -1;
 	}
 	
@@ -172,7 +172,7 @@ int card_buy(struct gameState *g)
 	
 	cardNumToName(tmp_num, cardName);
 	
-	printf("CARD: Valid Buy [%s]\n", cardName);
+	//printf("CARD: Valid Buy [%s]\n", cardName);
 	buyCard(c, g);
 	
 	return 0;
@@ -207,32 +207,32 @@ void game_play(long seed)
 	
 	players = g.numPlayers;
 	
-	printf("GAME: Starting\n");
-	printf("GAME: Players [%d]\n", players);
+	//printf("GAME: Starting\n");
+	//printf("GAME: Players [%d]\n", players);
 	
-	printf("\n########################\n\n");
+	//printf("\n########################\n\n");
 	
 	while(!isGameOver(&g)){
-		printf("\n          ----          \n\n");
-		printf("PLAYER: Turn [%d]\n", g.whoseTurn);
+		//print_f("\n          ----          \n\n");
+		//print_f("PLAYER: Turn [%d]\n", g.whoseTurn);
 		player_action(&g);
 		player_buy(&g);
-		printf("PLAYER: End Turn\n");
+		//print_f("PLAYER: End Turn\n");
 		endTurn(&g);
 	}
 	
-	printf("\n########################\n\n");
+	//printf("\n########################\n\n");
 	
-	printf("GAME: Over\n");
+	//print_f("GAME: Over\n");
 	
 	for(i = 0; i < players; i++){
-		printf("STATS: Player[%d] Score [%d]\n", i, scoreFor(i, &g));
+		//print_f("STATS: Player[%d] Score [%d]\n", i, scoreFor(i, &g));
 	}
 	
 	getWinners(w, &g);
 	for(i = 0; i< players; i++){
 		if(w[i]){
-			printf("STAT: Player [%d] Wins\n", i);
+			//print_f("STAT: Player [%d] Wins\n", i);
 		}
 	}
 }
