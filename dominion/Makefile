@@ -41,7 +41,7 @@ random: dominion.o rngs.o interface.o
 	gcc -o randomtestadventurer randomtestadventurer.c dominion.o rngs.o interface.o $(CFLAGS)
 	sh randScript.sh
 	
-project:
+project: dominion.o rngs.o
 	gcc -o projectcardtest projectcardtest.c dominion.c rngs.o $(CFLAGS)
 	-./projectcardtest
 	
