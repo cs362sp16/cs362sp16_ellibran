@@ -48,7 +48,7 @@ int main()
 	pre_numActions = g.numActions;
 	
 	addCardToHand(player, great_hall, &g);
-	playCard(hand_count, 0, 0, 0, &g);
+	playCard(0, 0, 0, 0, &g);
 	
 	post_card_num = g.handCount[player];
 	post_numActions = g.numActions;
