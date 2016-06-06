@@ -1,1 +1,12 @@
-﻿The bug that I am choosing to work on was one that was identified in a bug report by a fellow student. In the report they noted that, in my dominion.c, the function refac_great_hall fails to make a call discardCard(). From there I was able to use one of my preexisting tests to verify that the amount of cards in the player’s hand was incremented as opposed to having one card added and one discarded. Fixing this was just a matter of making a function call with the required parameters being passed. Overall this process used rules 1, 3, and 8 of David Agans’ Debugging Rules. In order to solve this problem I needed to look at the area of the code that was at fault and understand the system and what was failing in it, but more importantly, I received a fresh view on my code thanks to a classmate. This was ultimately the reason that I was able to identify and fix this piece of erroneous code.
+﻿The bug that I am choosing to work on was one that was identified in a bug 
+report by a fellow student. In the report they noted that, in my dominion.c,
+the function refac_great_hall fails to make a call discardCard(). From there
+I was able to use one of my preexisting tests to verify that the amount of 
+cards in the player’s hand was incremented as opposed to having one card 
+added and one discarded. Fixing this was just a matter of making a function 
+call with the required parameters being passed. Overall this process used 
+rules 1, 3, and 8 of David Agans’ Debugging Rules. In order to solve this 
+problem I needed to look at the area of the code that was at fault and 
+understand the system and what was failing in it, but more importantly, I 
+received a fresh view on my code thanks to a classmate. This was ultimately 
+the reason that I was able to identify and fix this piece of erroneous code.

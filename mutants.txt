@@ -1,0 +1,20 @@
+For part three of the project I chose to do mutant testing. First I used the 
+mutation tester from alipourm’s github to create 500+ c mutation files, the 
+first 10 as well as the changes made are in my github. From there I manually 
+ran a variety of the mutants to test how they functioned and after excluding 
+the non compilable and identical mutants I had the ones that could be 
+potentially used to show anything erroneous in my code. 
+
+My overall opinion of mutation testing was that it was an incredibly broad 
+system that did create a lot of mutants to test. Aside from simply creating 
+a lot of tests based on my code, and occasionally showing that a logical 
+change would not affect the code, I did not get the feeling that it was 
+creating beneficial tests. The changes made were logical one, an = to 
+a !=. A much more useful testing method in my mind would be the random 
+testing that we did in Assignment 4. 
+
+This method took code that existed and was going to used in my system and 
+then, in a full implementation of random testing, would test that system 
+with almost every option or choice that could be made. This method would 
+return errors that could actually occur in my code, as compared to errors 
+that would occur when my code was changed.
