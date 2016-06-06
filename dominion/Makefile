@@ -15,7 +15,7 @@ interface.o: interface.h interface.c
 player: player.c interface.o
 	gcc -o player player.c -g  dominion.o rngs.o interface.o $(CFLAGS)
 	
-unittestresults.out: dominion.o rngs.o
+unittestresults.out: dominion.o rngs.o 
 	gcc -o unittest1 unittest1.c dominion.c rngs.o $(CFLAGS)
 	gcc -o unittest2 unittest2.c dominion.c rngs.o $(CFLAGS)
 	gcc -o unittest3 unittest3.c dominion.c rngs.o $(CFLAGS)
@@ -41,7 +41,7 @@ random: dominion.o rngs.o interface.o
 	gcc -o randomtestadventurer randomtestadventurer.c dominion.o rngs.o interface.o $(CFLAGS)
 	sh randScript.sh
 	
-project: dominion.o rngs.o
+project: dominion.o rngs.o interface.o
 	gcc -o projectcardtest projectcardtest.c dominion.c rngs.o $(CFLAGS)
 	
 debug: dominion.o rngs.o interface.o
