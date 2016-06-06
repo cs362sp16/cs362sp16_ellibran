@@ -43,10 +43,9 @@ random: dominion.o rngs.o interface.o
 	
 project: dominion.o rngs.o
 	gcc -o projectcardtest projectcardtest.c dominion.c rngs.o $(CFLAGS)
-	-./projectcardtest
 	
 debug: dominion.o rngs.o interface.o
-	gcc -o randDEBUG -g randomtestcard1.c dominion.o rngs.o interface.o $(CFLAGS)
+	gcc -o DEBUG -g projectcardtest.c dominion.o rngs.o interface.o $(CFLAGS)
 	
 man: dominion.o rngs.o interface.o
 	gcc -o randomtestcard1 randomtestcard1.c dominion.o rngs.o interface.o $(CFLAGS)
